@@ -1,0 +1,31 @@
+<%include ./partials/header.ejs%>
+
+
+<div class="bg-zinc-800 w-full min-h-screen flex justify-center items-center">
+    <div class="postcard w-5/6 h-[85vh] bg-zinc-200 rounded-lg flex overflow-hidden">
+        <div class="left w-1/2 h-full ">
+            <div class="image bg-zinc-200 w-full h-full overflow-hidden">
+                <img class="w-full h-full object-cover" src="/images/uploads/<%=post.image%>" alt="">
+            </div>
+        </div>
+        <div class="right w-1/2 flex justify-center items-center text-white bg-zinc-700" >
+            <div class="content w-5/6 h-5/6">
+                <div class="flex items-center justify-between ">
+                    <div class="profile flex items-center gap-3">
+                        <div class="profilepic w-16 h-16 rounded-full overflow-hidden"><img class="w-full h-full object-cover" src="/images/uploads/<%=post.user.profileImage%>" alt=""></div>
+                        <div class="username text-sm font-semibold"><%=post.user.username%></div>
+                    </div>
+                    <!-- <button class="text-white text-sm font-semibold bg-red-600 rounded-full px-5 py-3">Save</button> -->
+                </div>
+                <div>
+                    <h1 class="mt-10 font-semibold text-xl"><%=post.title%></h1>
+                <h2 class="mt-5 text-sm"><%=post.description%></h2>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<%include ./partials/footer.ejs%>
